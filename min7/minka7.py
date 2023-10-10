@@ -12,6 +12,5 @@ def flatten(list_in, limit=0):
 
 
 print(flatten([1, 2, [4, 5], [6, [7]], 8], 1))
-
 print(flatten([1, 2, [4, 5], [6, [7]], 8], 2))
 print(flatten([1, 2, [4, 5], [6, [7]], 8], 3))
