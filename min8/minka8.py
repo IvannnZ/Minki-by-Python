@@ -25,7 +25,6 @@ def deprecated(since=None, will_be_removed=None):
     return decorator
 
 
-
 @deprecated(since="1.0", will_be_removed="5.0")
 def bar():
     print("Hello from bar")
