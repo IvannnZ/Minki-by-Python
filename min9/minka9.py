@@ -10,7 +10,6 @@ def my_max_len(list):
 
 
 def my_max_len_colum(num, list, one_str):
-
     return max(*(len(str(i[num])) for i in list), len(one_str))
 
 
