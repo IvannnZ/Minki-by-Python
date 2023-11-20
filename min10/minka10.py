@@ -1,6 +1,11 @@
+class LRUCache_2: # TODO сделать через отдельно хеш таблицу и лист
+    def __init__(self, capacity=16):
+        pass
+
+dict()
 class LRUCache:
     def __init__(self, capacity=16):
-        self.max_in = capacity
+        self.capacity = capacity
         self.box = {}
 
     def put(self, key, value):
@@ -8,7 +13,7 @@ class LRUCache:
             del self.box[key]
             self.box[key] = value
         else:
-            if self.max_in <= len(self.box):
+            if self.capacity <= len(self.box):
                 del self.box[list(self.box.keys())[0]]
             self.box[key] = value
         pass
@@ -22,6 +27,7 @@ class LRUCache:
 
     def print(self):
         print(self.box, len(self.box))
+
 
 a = LRUCache()
 
@@ -48,7 +54,9 @@ a.put(32, 4)
 
 a.print()
 
-print(a.get(10))
+print(f" {a.get(10)}")
+
+a.print()
 a.put(410, 1)
 a.put(41, 2)
 a.put(45, 3)
