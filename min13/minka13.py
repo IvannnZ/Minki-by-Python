@@ -3,6 +3,7 @@ def coroutine(func):
         fun = func(*args, **kwargs)
         next(fun)
         return fun
+
     return wrapper
 
 
@@ -19,5 +20,5 @@ def storage():
 
 
 st = storage()
-print(st.send(42)) # False
-print(st.send(42)) # True
+print(st.send(42))  # False
+print(st.send(42))  # True

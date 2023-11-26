@@ -3,6 +3,7 @@ class Node:
         self.data = data
         self.next = None
 
+
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -63,20 +64,20 @@ class LinkedList:
         def __iter__(self):
             return self
 
+
 linked_list = LinkedList()
 linked_list.append(1)
 linked_list.append(2)
 linked_list.append(3)
 linked_list.append(4)
 
-linked_list.print_list()  # Вывод: 1 -> 2 -> 3 -> 4 -> None
+linked_list.print_list()
 
 linked_list.prepend(5)
-linked_list.print_list()  # Вывод: 5 -> 1 -> 2 -> 3 -> 4 -> None
+linked_list.print_list()
 
 linked_list.delete_node(3)
-linked_list.print_list()  # Вывод: 5 -> 1 -> 2 -> 4 -> None
-
+linked_list.print_list()
 
 for i in linked_list:
     print(i)

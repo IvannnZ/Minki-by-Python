@@ -1,6 +1,3 @@
-import itertools
-
-
 class Node:
     def __init__(self, data):
         self.data = data
@@ -74,14 +71,13 @@ linked_list.append(2)
 linked_list.append(3)
 linked_list.append(4)
 
+linked_list.print_list()
 
-# linked_list.print_list()  # Вывод: 1 -> 2 -> 3 -> 4 -> None
+linked_list.prepend(5)
+linked_list.print_list()
 
-# linked_list.prepend(5)
-# linked_list.print_list()  # Вывод: 5 -> 1 -> 2 -> 3 -> 4 -> None
-
-# linked_list.delete_node(3)
-# linked_list.print_list()  # Вывод: 5 -> 1 -> 2 -> 4 -> None
+linked_list.delete_node(3)
+linked_list.print_list()
 
 
 def cahin(*iters):
@@ -90,5 +86,5 @@ def cahin(*iters):
             yield j
 
 
-for i in cahin(linked_list, [4,3,2,1], " IT WORKS!"):
+for i in cahin(linked_list, [4, 3, 2, 1], " IT WORKS!"):
     print(i)
