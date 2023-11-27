@@ -1,5 +1,8 @@
 import functools
-
+'''
+TODO
+убрать копипасту
+'''
 
 def deprecated(since=None, will_be_removed=None):
     def decorator(func):

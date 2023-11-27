@@ -80,11 +80,10 @@ linked_list.delete_node(3)
 linked_list.print_list()
 
 
-def cahin(*iters):
+def chain(*iters):
     for i in iters:
-        for j in i:
-            yield j
+        yield from i
 
 
-for i in cahin(linked_list, [4, 3, 2, 1], " IT WORKS!"):
+for i in chain(linked_list, [4, 3, 2, 1], " IT WORKS!"):
     print(i)

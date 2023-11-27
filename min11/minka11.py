@@ -1,7 +1,6 @@
-
-
 class Singleton:
     _instances = {}
+    def __init__(self):
 
     def __new__(cls, *args, **kwargs):
         print(cls, *args, **kwargs)
@@ -11,29 +10,29 @@ class Singleton:
         return cls._instances[cls]
 
 
-class Counter():
+class Counter:
     """Special class to count things"""
 
 
-def __init__(self, initial_count=0, step=1):
-    self.count = initial_count
-    self.step = step
+    def __init__(self, initial_count=0, step=1):
+        self.count = initial_count
+        self.step = step
 
 
-def increment(self):
-    self.count += self.step
+    def increment(self):
+        self.count += self.step
 
-class Counter2():
+class Counter2:
     """Special class to count things"""
 
 
-def __init__(self, initial_count=0, step=1):
-    self.count = initial_count
-    self.step = step
+    def __init__(self, initial_count=0, step=1):
+        self.count = initial_count
+        self.step = step
 
 
-def increment(self):
-    self.count += self.step
+    def increment(self):
+        self.count += self.step
 
 
 
@@ -44,10 +43,14 @@ class GlobalCounter(Singleton, Counter):
 class GlobalCounter2(Singleton, Counter):
     pass
 
-
 gc1 = GlobalCounter()
-gc2 = GlobalCounter()
+print(gc1.count)
+gc1.increment()
+print(gc1.count)
 
+gc2 = GlobalCounter()
+print(gc2.count)
+print(gc1.count)
 print(id(gc1) == id(gc2))
 
 

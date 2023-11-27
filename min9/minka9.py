@@ -1,12 +1,9 @@
-def my_len(list):
-    return len(list if type(list) == type(["", ""]) else " ")
-
-
-def my_max_len(list):
-    if type(list) == type(["", ""]):
-        return max(len(i) for i in list)
-    else:
-        return len(list)
+def my_max_len(lst):
+    #lst = list(lst)
+    #if type(lst) == type(["", ""]):
+    return max(len(i) for i in lst)
+    #else:
+    #    return len(lst)
 
 
 def my_max_len_colum(num, list, one_str):
@@ -14,7 +11,8 @@ def my_max_len_colum(num, list, one_str):
 
 
 def format_table(benchmarks, algos, result):
-    all_len = [0] * (my_len(algos) + 1)
+    all_len = [0] * (len(algos) + 1)
+
     all_len[0] = my_max_len(benchmarks + ["Benchmarks"])
     c = 0
     for i in algos:
@@ -38,7 +36,7 @@ def format_table(benchmarks, algos, result):
     print()
 
 
-some = (["best case", "worst case"], ["quick sort", "merge sort", "bubble sort"], [[1.23, 1.56, 2.0], [3.3, 2.9, 3.9]])
+some = (["b", "w"], ["quick sort", "merge sort", "bubble sort"], [[1.23, 1.566666666666666666666666666666, 2.0], [3.3, 2.9, 3.9]])
 
 format_table(*some)
 

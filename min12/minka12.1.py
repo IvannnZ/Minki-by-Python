@@ -46,12 +46,13 @@ class LinkedList:
         print("None")
 
     def __iter__(self):
-        return LinkedList.Iterator(self.head)
+        return LinkedList.Iterator
 
     class Iterator:
-        def __init__(self, head):
-            self.curr = head
-            self.head = head
+        def __init__(self):
+            print("11111111111111111111111111111111")
+            self.curr = self.head
+            self.head = self.head
 
         def __next__(self):
             if self.curr:
@@ -59,7 +60,8 @@ class LinkedList:
                 self.curr = self.curr.next
                 return res.data
             else:
-                self.curr = self.head
+                print("dfdhf")
+                raise StopIteration
 
         def __iter__(self):
             return self
@@ -79,5 +81,26 @@ linked_list.print_list()
 linked_list.delete_node(3)
 linked_list.print_list()
 
-for i in linked_list:
+def cicle(iter):
+    while True:
+        for i in iter:
+            yield i
+
+for i in cicle([1,2,3,4]):
     print(i)
+
+'''
+def cicle(cls):
+    while(1):
+        try:
+            for i in cls:
+                yield i
+        except StopIteration:
+            print("test")
+            raise StopIteration
+
+
+
+for i in cicle(linked_list):
+    print(i)
+'''

@@ -5,9 +5,9 @@ def flatten(list_in):
     """
     list_ret = []
     for i in list_in:
-        if not ((isinstance(i, list))):
+        if not isinstance(i, list):
             list_ret.append(i)
-        elif isinstance(i, list):
+        else:
             for j in flatten(i):
                 list_ret.append(j)
     return list_ret
