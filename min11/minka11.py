@@ -6,7 +6,7 @@ class Singleton:
         print(cls, *args, **kwargs)
         if cls._instances == None:
             cls._instances = super().__new__(cls)
-            cls.__init__(cls._instances, *args, **kwargs)
+        else:
             cls.__init__ = cls.not_init_
 
         return cls._instances

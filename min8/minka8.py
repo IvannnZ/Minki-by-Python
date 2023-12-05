@@ -1,10 +1,5 @@
 import functools
 
-'''
-TODO
-убрать копипасту
-'''
-
 
 def deprecated(since=None, will_be_removed=None):
     def decorator(func):
@@ -20,7 +15,7 @@ def deprecated(since=None, will_be_removed=None):
             if will_be_removed is None:
                 answer += " future versions."
             else:
-                answer+=f" version {will_be_removed}."
+                answer += f" version {will_be_removed}."
             print(answer)
 
             return func(*args, **kwargs)

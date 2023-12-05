@@ -83,8 +83,8 @@ linked_list.print_list()
 
 def cicle(iter):
     while True:
-        for i in iter:
-            yield i
+        yield from iter
+
 
 for i in cicle([1,2,3,4]):
     print(i)
