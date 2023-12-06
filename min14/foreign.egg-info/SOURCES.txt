@@ -1,0 +1,7 @@
+foreign.c
+setup.py
+foreign.egg-info/PKG-INFO
+foreign.egg-info/SOURCES.txt
+foreign.egg-info/dependency_links.txt
+foreign.egg-info/top_level.txt
+test/test.py
